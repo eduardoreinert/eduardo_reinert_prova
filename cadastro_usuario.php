@@ -44,7 +44,7 @@
         <input type="text" id="nome" name="nome" required>
 
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="eamil" required> 
+        <input type="email" id="email" name="email" required> 
 
         <label for="senha">Senha:</label>
         <input type="password" id="senha" name="senha" required> 
@@ -62,5 +62,7 @@
     </form>
 
     <a href="principal.php">Voltar</a>
+
+    <p>EDUARDO BORSATO REINERT | DESN20242v1</p>
 </body>
 </html>

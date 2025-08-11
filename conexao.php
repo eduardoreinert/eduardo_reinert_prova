@@ -65,5 +65,7 @@ try {
 // foi estabelecida com sucesso e o objeto $pdo está pronto para ser usado.
 // Se este arquivo for incluído (usando 'require' ou 'include') em outros scripts PHP,
 // a variável $pdo estará disponível para eles.
+
+//EDUARDO BORSATO REINERT
 ?>
 

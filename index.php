@@ -55,5 +55,6 @@
     </form>
 
     <p><a href="recuperar_senha.php">Esqueci a senha</a></p>
+    <p>EDUARDO BORSATO REINERT | DESN20242v1</p>
 </body>
 </html>
