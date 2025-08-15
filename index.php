@@ -41,6 +41,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="bootstrap/jquery-3.6.0.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
 <body>
     <h2>Login</h2>

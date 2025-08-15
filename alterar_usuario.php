@@ -23,7 +23,7 @@
             } else {
                 $sql="SELECT * FROM usuario where nome LIKE :busca_nome";
                 $stmt=$pdo->prepare($sql);
-                $stmt->bindParam(':busca_nome',"$busca%",PDO::PARAM_STR);
+                $stmt->bindValue(':busca_nome',"$busca%",PDO::PARAM_STR);
             }
 
             $stmt->execute();
@@ -72,10 +72,21 @@
             <label for="id_perfil">Perfil</label>
             <select id="id_perfil" name="id_perfil">
                 <option value="1" <?=$usuario['id_perfil'] == 1 ?'select':''?>>Administrador</option>
-                <option value="2" <?=$usuario['id_perfil'] == 1 ?'select':''?>>Secretaria</option>
-                <option value="3" <?=$usuario['id_perfil'] == 1 ?'select':''?>>Almoxarife</option>
-                <option value="4" <?=$usuario['id_perfil'] == 1 ?'select':''?>>Cliente</option>
+                <option value="2" <?=$usuario['id_perfil'] == 2 ?'select':''?>>Secretaria</option>
+                <option value="3" <?=$usuario['id_perfil'] == 3 ?'select':''?>>Almoxarife</option>
+                <option value="4" <?=$usuario['id_perfil'] == 4 ?'select':''?>>Cliente</option>
             </select>
+
+            <!-- se o usuario logado for adm, exibir opção de alterar senha -->
+            <?php if($_SESSION['perfil']==1): ?>
+                <label for="nova_senha">Nova senha</label>
+                <input type="password" id="nova_senha" name="nova_senha">
+            <?php endif; ?>
+
+            <button type="submit">Alterar</button>
+            <button type="reset">Limpar</button>
         </form>
+    <?php endif; ?>
+    <a href="principal.php">Voltar</a>
 </body>
 </html>
