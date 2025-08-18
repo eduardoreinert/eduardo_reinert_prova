@@ -58,6 +58,9 @@
     <title>Painel Principal</title>
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
+    <script src="bootstrap/jquery-3.6.0.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
 <body>
     <header>

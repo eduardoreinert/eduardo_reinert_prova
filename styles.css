@@ -46,7 +46,7 @@ header {
 }
 
 .logout button:hover {
-    background-color: #c9302c;
+    background-color: #971414;
 }
 
 .menu {
@@ -154,7 +154,7 @@ select {
 
 /* Ajusta os botões */
 button {
-    width: 80%;
+    width: 50%;
     padding: 10px;
     background-color: #007bff; /* Azul bonito */
     color: white;

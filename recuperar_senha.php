@@ -40,16 +40,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar senha</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="bootstrap/jquery-3.6.0.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
 <body>
-    <h2>Recuperar senha</h2>
+    <h2 align="center">Recuperar senha</h2>
     <form action="recuperar_senha.php" method="POST">
         <label for="email">Digite o seu E-mail cadastrado</label>
         <input type="email" id="email" name="email" required>
 
         <button type="submit">Enviar a senha temporária</button>
     </form>
-    <p>EDUARDO BORSATO REINERT | DESN20242v1</p>
+    <p align="center">EDUARDO BORSATO REINERT | DESN20242v1</p>
 
 </body>
 </html>

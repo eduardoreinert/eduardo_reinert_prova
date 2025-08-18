@@ -36,6 +36,7 @@
             }
         }
     }
+    
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -44,10 +45,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Senha</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="bootstrap/jquery-3.6.0.js"></script>
+    <script src="bootstrap/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
 </head>
 <body>
-    <h2>Alterar Senha</h2>
-    <p>Olá, <strong><?php echo $_SESSION['usuario'];?></strong>.Digite sua nova senha abaixo: </p>
+    <h2 align="center">Alterar Senha</h2>
+    <p align="center">Olá, <strong><?php echo $_SESSION['usuario'];?></strong>. Digite sua nova senha abaixo: </p>
 
     <form action="alterar_senha.php" method="POST">
         <label for="nova_senha">Nova senha</label>
@@ -72,7 +76,8 @@
             senha2.type = tipo;
         }
     </script>
-        <p>EDUARDO BORSATO REINERT | DESN20242v1</p>
+    <p align="center"><a class="btn btn-secondary" role="button" href="index.php">Voltar</a></p>
+    <p align="center">EDUARDO BORSATO REINERT | DESN20242v1</p>
 
 </body>
 </html>
