@@ -80,6 +80,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar usuário</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="valida_campo.js"></script>
     <script src="bootstrap/jquery-3.6.0.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
@@ -104,7 +105,7 @@
     <h2 align="center">Cadastrar Usuário</h2>
     <form action="cadastro_usuario.php" method="POST">
         <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+        <input type="text" id="nome" name="nome" onkeypress="return apenasLetras(event)" required>
 
         <label for="email">E-mail:</label>
         <input type="email" id="email" name="email" required> 
@@ -120,7 +121,7 @@
             <option value="4">Cliente</option>  
         </select>
         </br>
-        <button class="btn btn-success" type="submit">Salvar</button>
+        <button class="btn btn-success" id="enviar_formulario" onclick="conferir_campos()" type="submit">Salvar</button>
         </br>
         <button class="btn btn-primary" type="reset">Cancelar</button>
     </form>
