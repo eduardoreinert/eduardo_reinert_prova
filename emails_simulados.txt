@@ -22,3 +22,11 @@ Para: sergio@sergio
 Olá! Sua nova senha temporária é: pr9HnyqM
 
 ----------------------
+Para: admin@admin
+Olá! Sua nova senha temporária é: vjCKSxVE
+
+----------------------
+Para: carlos@empresa.com
+Olá! Sua nova senha temporária é: BWT3MJ9K
+
+----------------------
