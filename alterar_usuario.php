@@ -111,7 +111,7 @@
     </nav>
     <h2 align="center">Alterar usuário</h2>
     
-    <form action="alterar_usuario.php" method="POST">
+    <form class="border border-dark-subtle" action="alterar_usuario.php" method="POST">
         <label for="busca_usuario">Digite o ID ou Nome do usuário</label>
         <input type="text" id="busca_usuario" name="busca_usuario" required onkeyup="buscarSugestoes()">
 
