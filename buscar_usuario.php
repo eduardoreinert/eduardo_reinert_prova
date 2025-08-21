@@ -104,7 +104,7 @@
         </ul>
     </nav>
     <h2 align="center">Lista de Usuários</h2>
-    <form action="buscar_usuario.php" method="POST">
+    <form class="border border-dark-subtle" action="buscar_usuario.php" method="POST">
         <label for="busca">Digite o ID ou Nome(opcional): </label>
         <input type="text" id="busca" name="busca">
         <button class="btn btn-primary" type="submit">Pesquisar</button>
