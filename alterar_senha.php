@@ -53,7 +53,7 @@
     <h2 align="center">Alterar Senha</h2>
     <p align="center">Olá, <strong><?php echo $_SESSION['usuario'];?></strong>. Digite sua nova senha abaixo: </p>
 
-    <form action="alterar_senha.php" method="POST">
+    <form class="border border-dark-subtle" action="alterar_senha.php" method="POST">
         <label for="nova_senha">Nova senha</label>
         <input type="password" id="nova_senha" name="nova_senha" required>
 
