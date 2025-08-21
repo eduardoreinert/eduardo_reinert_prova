@@ -103,7 +103,7 @@
         </ul>
     </nav>
     <h2 align="center">Cadastrar Usuário</h2>
-    <form action="cadastro_usuario.php" method="POST">
+    <form class="border border-dark-subtle" action="cadastro_usuario.php" method="POST">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" onkeypress="return apenasLetras(event)" required>
 
