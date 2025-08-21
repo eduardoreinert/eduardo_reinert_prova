@@ -48,7 +48,7 @@
 </head>
 <body>
     <h2 align="center">Login</h2>
-    <form action="index.php" method="POST">
+    <form class="border border-dark-subtle" action="index.php" method="POST">
         <label for="email">E-mail</label>
         <input type="email" id="email" name="email" required>
 
