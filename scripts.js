@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Função para buscar sugestões de usuários enquanto digita
 function buscarSugestoes() {
-    let busca = document.getElementById("busca_usuario").value;
+    let busca = document.getElementById("busca").value;
     
     // Se o usuário digitou menos de 2 caracteres, limpa as sugestões
     if (busca.length < 2) {
@@ -44,6 +44,6 @@ function buscarSugestoes() {
 
 // Função para selecionar um usuário da lista de sugestões
 function selecionarUsuario(id, nome) {
-    document.getElementById("busca_usuario").value = nome;
+    document.getElementById("busca").value = nome;
     document.getElementById("sugestoes").innerHTML = "";
 }
