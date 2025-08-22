@@ -127,13 +127,13 @@
             <input type="hidden" name="id_funcionario" value="<?=htmlspecialchars($funcionario['id_funcionario'])?>">
 
             <label for="nome_funcionario">Nome</label>
-            <input type="text" id="nome_funcionario" name="nome_funcionario" value="<?=htmlspecialchars($funcionario['nome_funcionario'])?>" onkeypress="return apenasLetras(event)" required>
+            <input type="text" id="nome_funcionario" placeholder="Insira o nome (min. 3)"name="nome_funcionario" value="<?=htmlspecialchars($funcionario['nome_funcionario'])?>" onkeypress="return apenasLetras(event)" required>
 
             <label for="email">E-mail</label>
-            <input type="email" id="email" name="email" value="<?=htmlspecialchars($funcionario['email'])?>" required>
+            <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" value="<?=htmlspecialchars($funcionario['email'])?>" required>
 
             <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" value="<?=htmlspecialchars($funcionario['endereco'])?>" required> 
+            <input type="text" id="endereco" name="endereco" placeholder="Rua exemplo, 0" value="<?=htmlspecialchars($funcionario['endereco'])?>" required> 
             
             <label for="telefone">Telefone:</label>
             <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" value="<?=htmlspecialchars($funcionario['telefone'])?>" onkeypress="return apenasNumeros(event)" maxlength="11" required> 
