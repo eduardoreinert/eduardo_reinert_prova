@@ -86,12 +86,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar Funcionário</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- certifique-se de que o JavaScript esta sendo carregado corretamente -->
     <script src="scripts.js"></script>
     <script src="bootstrap/jquery-3.6.0.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <script src="valida_campo.js"></script>
+    <script src="validacoes.js"></script>
 </head>
 <body>
     <nav>
@@ -136,13 +136,36 @@
             <input type="text" id="endereco" name="endereco" value="<?=htmlspecialchars($funcionario['endereco'])?>" required> 
             
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" name="telefone" value="<?=htmlspecialchars($funcionario['telefone'])?>" onkeypress="return apenasNumeros(event)" maxlength="11" required> 
+            <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" value="<?=htmlspecialchars($funcionario['telefone'])?>" onkeypress="return apenasNumeros(event)" maxlength="11" required> 
 
-            <button class="btn btn-primary" type="submit">Alterar</button>
+            <button class="btn btn-success" type="submit" onclick="return validarFuncionario()">Alterar</button>
             </br>
             <button class="btn btn-primary" type="reset">Limpar</button>
         </form>
     <?php endif; ?>
     <p align="center"><a class="btn btn-secondary" role="button" href="principal.php">Voltar</a></p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>$("#telefone").mask("(00) 00000-0000")</script>
+    <script>
+        function validarFuncionario(){
+            let telefone = document.getElementById("telefone").value.trim();
+            console.log(telefone);
+
+            if(telefone.length !== 15){
+            alert('Telefone inválido!');
+            event.preventDefault();
+            return;
+            }
+
+            let nome = document.getElementById("nome_funcionario").value;
+
+            if (nome.length < 3) {
+                alert("O nome do funcionário deve ter pelo menos 3 caracteres.");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
