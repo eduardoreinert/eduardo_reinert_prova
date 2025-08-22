@@ -106,16 +106,16 @@
     <h2 align="center">Cadastrar Funcionário</h2>
     <form class="border border-dark-subtle" action="cadastro_funcionario.php" method="POST">
         <label for="nome_funcionario">Nome Funcionário:</label>
-        <input type="text" id="nome_funcionario" name="nome_funcionario" onkeypress="return apenasLetras(event)" required>
+        <input type="text" id="nome_funcionario" name="nome_funcionario" placeholder="Insira o nome (min. 3)" onkeypress="return apenasLetras(event)" required>
 
         <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required> 
+        <input type="email" id="email" name="email" placeholder="exemplo@exemplo.com" required> 
 
         <label for="endereco">Endereço:</label>
-        <input type="text" id="endereco" name="endereco" required> 
+        <input type="text" id="endereco" name="endereco" placeholder="Rua exemplo, 0" required> 
         
         <label for="telefone">Telefone:</label>
-        <input type="text" id="telefone" name="telefone" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" placeholder="(##) #####-####" onkeypress="return apenasNumeros(event)" minlength="10" maxlength="11" required> 
+        <input type="text" id="telefone" name="telefone" placeholder="(00) 00000-0000" onkeypress="return apenasNumeros(event)" minlength="10" maxlength="11" required> 
         </br>
         <button class="btn btn-success" id="enviar_formulario" type="submit" onclick="return validarFuncionario()">Salvar</button>
         </br>
@@ -125,5 +125,29 @@
     <p align="center"><a class="btn btn-secondary" role="button" href="principal.php">Voltar</a></p>
 
     <p align="center">EDUARDO BORSATO REINERT | DESN20242v1</p>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>$("#telefone").mask("(00) 00000-0000")</script>
+
+    <script>
+        function validarFuncionario(){
+            let telefone = document.getElementById("telefone").value.trim();
+            console.log(telefone);
+
+            if(telefone.length !== 15){
+            alert('Telefone inválido!');
+            event.preventDefault();
+            return;
+            }
+
+            let nome = document.getElementById("nome_funcionario").value;
+
+            if (nome.length < 3) {
+                alert("O nome do funcionário deve ter pelo menos 3 caracteres.");
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
