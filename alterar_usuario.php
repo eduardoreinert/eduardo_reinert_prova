@@ -145,7 +145,7 @@
                 <input type="password" id="nova_senha" name="nova_senha">
             <?php endif; ?>
 
-            <button class="btn btn-primary" type="submit">Alterar</button>
+            <button class="btn btn-success" type="submit">Alterar</button>
             </br>
             <button class="btn btn-primary" type="reset">Limpar</button>
         </form>
